@@ -25,7 +25,7 @@ const Form = () => {
           ></textarea>
         </div>
         <div className="flex items-center justify-center w-full">
-        <button className="bg-black px-6 py-3 rounded-lg shadow-[5px_5px_0px_0px_rgba(109,40,217)]  mt-6" type="submit">Send message</button>
+        <button className="bg-black px-6 py-3 rounded-lg shadow-[5px_5px_0px_0px_rgba(109,40,217)] mt-6">Send message</button>
         </div>
       </form>
     </div>
