@@ -4,6 +4,7 @@ import { useTransform, useScroll, motion } from 'framer-motion';
 import { useRef } from 'react';
 import styles from './style.module.scss';
 
+
 const Card = ({i, title, description, src, url, color, progress, range, targetScale}) => {
   const scale = useTransform(progress, range, [1, targetScale]);
 
@@ -17,9 +18,9 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
 
   return (
     <div ref={container} className={styles.cardContainer}>
-      <div 
+      <motion.div 
         className={styles.card}
-        style={{backgroundColor: color, scale, top:`calc(-5vh + ${i * 25}px)`}}
+        style={{backgroundColor: color, scale, top:`calc(-5vh + ${i * 15}px)`}}
       >
         <h2>{title}</h2>
         <div className={styles.body}>
@@ -46,7 +47,7 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
             </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

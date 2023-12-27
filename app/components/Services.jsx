@@ -7,15 +7,14 @@ import { useRef, useEffect } from 'react'
 import Lenis from '@studio-freight/lenis'
 
 const Services = () => {
-
-    useEffect( () => {
-        const lenis = new Lenis()
-        function raf(time) {
-          lenis.raf(time)
-          requestAnimationFrame(raf)
-        }
-        requestAnimationFrame(raf)
-      })
+  useEffect(() => {
+    const lenis = new Lenis()
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  })
 
   const container = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -39,7 +38,7 @@ const Services = () => {
               i={i}
               {...project}
               progress={scrollYProgress}
-              range={[i * 0.25, 1]}
+              range={[i * 0.05, 1]}
               targetScale={targetScale}
             />
           )
